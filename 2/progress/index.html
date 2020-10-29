@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress and meter tags</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 50px;
+        }
+        meter, progress {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Progress and meter tags</h1>
+    <div>0/100</div>
+    <progress value="0" max="100">progress</progress>
+    <br>
+    <div>0/100</div>
+    <meter min="0" max="100" low="30">meter</meter>
+    <script>
+        setInterval(() => {
+            const p = document.querySelector('progress')
+            p.value = p.value <= p.max ? p.value + 2 : p.max
+            document.querySelector('div').innerHTML = `${p.value}/${p.max}`
+        }, 50)
+        setInterval(() => {
+            const p = document.querySelector('meter')
+            p.value = p.value <= p.max ? p.value + 1 : p.max
+            document.querySelector('div:nth-child(5)').innerHTML = `${p.value}/${p.max}`
+        }, 30)
+    </script>
+</body>
+</html>
