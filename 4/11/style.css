@@ -1,0 +1,43 @@
+input[type='checkbox'] {
+    background-color: red;
+}
+
+input[type='checkbox']:checked {
+    background-color: green;
+}
+
+[id|='message'] {
+    background-color: blue;
+}
+
+[id^='message-'] {
+    background-color: pink;
+}
+
+a[href$='.zip'] {
+    background-color: powderblue;
+}
+
+[data-action~='delete'] {
+    background-color: saddlebrown;
+}
+
+[data-action]:not([data-action~='delete']) {
+    background-color: skyblue;
+}
+
+#messages li:nth-child(even) {
+    background-color: red;
+}
+
+h3#widget-title+ {
+    background-color: springgreen;
+}
+
+h3#widget-title~a {
+    background-color: steelblue;
+}
+
+#messages li:last-child a {
+    background-color: yellow;
+}
