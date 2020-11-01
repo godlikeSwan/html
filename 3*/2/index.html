@@ -4,10 +4,249 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internal CSS</title>
+    <style>
+        .i1 {
+            width: 200px;
+            box-shadow: 5px 5px 5px 5px;
+        }
+
+        .i2 {
+            transition: 2s;
+            width: 200px;
+            box-shadow:
+            -2px 2px 2px 2px yellow,
+            2px -2px 2px 2px violet,
+            5px 5px 5px 5px green,
+            -5px -5px 5px 5px red;
+        }
+
+        .i2:hover {
+            transition: 2s;
+            box-shadow:
+            -2px 2px 2px 2px blue,
+            2px -2px 2px 2px brown,
+            5px 5px 5px 5px pink,
+            -5px -5px 5px 5px orange;
+        }
+
+        .t1 {
+            padding: 10px;
+            background-color: palegoldenrod;
+            width: 500px;
+            box-shadow: 5px 5px 5px 5px;
+        }
+
+        span.sh::after {
+            color: red;
+            content: '\2665';
+        }
+
+        span.ss::after {
+            content: '\2660';
+        }
+
+        span.sd::after {
+            color: red;
+            content: '\2666'
+        }
+
+        span.sc::after {
+            content: '\2663';
+        }
+
+        span.l1::after {
+            content: '\3B1';
+        }
+
+        span.l2::after {
+            content: '\3B2';
+        }
+
+        span.l3::after {
+            content: '\3B3';
+        }
+
+        span.l4::after {
+            content: '\3B4';
+        }
+
+        span.l5::after {
+            content: '\3B5';
+        }
+
+        td {
+            margin: 0;
+            width: 20px;
+            height: 20px;
+            background-color: brown;
+        }
+        tr:nth-child(even) td:nth-child(even),
+        tr:nth-child(odd) td:nth-child(odd) {
+            border: 1px brown solid;
+            background-color: moccasin;
+        }
+        th {
+            padding: 0;
+            height: 20px;
+            width: 15px;
+            color: brown;
+        }
+        thead>th {
+            width: 20px;
+            height: 15px;
+        }
+        table {
+            padding: 5px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            background-color: moccasin;
+        }
+        .chart__circle {
+            animation: circle-chart-fill 5s reverse;
+            transform: rotate(-90deg);
+            transform-origin: center;
+        }
+        @keyframes circle-chart-fill {
+            to { stroke-dasharray: 0 200; }
+        }
+    </style>
 </head>
 <body>
     <h1>Internal CSS</h1>
     <h2>Task 1</h2>
-    <img src="small_picture.svg">
+    <img class="i1" src="small_picture.svg"><br>
+    <h2>Task 2</h2><br>
+    <img src="small_picture.jpg" class="i2"><br>
+    <h2>Task 3</h2>
+    <div class="t1">
+        <h3>Lorem Ipsum</h3>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a commodo lectus. Nunc faucibus odio vel nibh pharetra elementum. Pellentesque commodo, enim ac convallis blandit, urna libero rutrum arcu, non pulvinar orci velit id orci. Phasellus quis porttitor tellus. Suspendisse eget est non sem facilisis sagittis nec eget turpis. Vestibulum tortor leo, pretium nec sem a, efficitur tincidunt justo. Proin ut purus in nulla aliquet facilisis. Sed non dolor luctus, malesuada leo sollicitudin, dapibus enim. </p>
+    </div>
+    <h2>Task 4</h2>
+    <div>
+        <p>
+            There are 4 playing cards suits: hearts <span class="sh"></span>,
+            diamonds <span class="sd"></span>, clubs <span class="sc"></span> and
+            spades <span class="ss"></span>. <br>
+            There are 5 first letters of greek alphabet:
+            <span class="l1"></span>
+            <span class="l2"></span>
+            <span class="l3"></span>
+            <span class="l4"></span>
+            <span class="l5"></span>.<br>
+
+        </p>
+    </div>
+    <h2>Task 5</h2>
+    <table cellspacing="0">
+        <thead>
+            <th></th>
+            <th>a</th>
+            <th>b</th>
+            <th>c</th>
+            <th>d</th>
+            <th>e</th>
+            <th>f</th>
+            <th>g</th>
+            <th>h</th>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>8</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Task 6</h2>
+    <svg class="chart" height="180" width="180" viewbox="0 0 33.83098862 33.83098862">
+        <circle class="chart__background" stroke="#faa" stroke-width="8" cx="16.91549431" cy="16.91549431" r="10" fill="#fee"></circle>
+        <circle class="chart__circle" stroke="#f33" stroke-width="8" cx="16.91549431" cy="16.91549431" r="10" fill="none" stroke-dasharray="62,200"></circle>
+    </svg>
+    <h2>Task 7</h2>
+    
 </body>
 </html>
