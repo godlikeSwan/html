@@ -41,3 +41,208 @@ h3#widget-title~a {
 #messages li:last-child a {
     background-color: yellow;
 }
+
+.keywords {
+    list-style: upper-roman;
+}
+.li1 {
+    color: green;
+    text-decoration: underline violet 3px;
+}
+.li2 {
+    color: red;
+    text-decoration: overline dotted 3px;
+}
+.li3 {
+    color: blue;
+    text-decoration: line-through red double 1px;
+}
+.li4 {
+    color: #dd0;
+    text-decoration: underline blue;
+}
+.li5 {
+    color: violet;
+    text-decoration: wavy underline overline 2px;
+}
+.t1 {
+    border: red 2px solid;
+    margin: 20px;
+}
+.t1 th {
+    padding: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.t1 td {
+    padding: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-top: rgba(255, 0, 0, .5) dashed 1px;
+    background-color: rgba(255, 0, 0, .2);
+}
+.t1 tr:hover td {
+    background-color: rgba(255, 0, 0, .3);
+}
+.t2 {
+    border: 5px red solid;
+    border-left: none;
+    border-right: 1px red solid;
+    background-color: rgba(255, 0, 0, .2);
+    margin: 20px;
+    text-align: center;
+}
+.t2 td, .t2 th {
+    border-left: 1px red solid;
+    padding: 5px 20px;
+}
+.t2 td {
+    font-size: smaller;
+}
+.battery {
+    margin: 50px;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 12px;
+    transform: scale(5,5);
+    border: 2px solid;
+}
+.battery::after,
+.battery::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    height: 6px;
+    background: currentColor;
+    top: 1px;
+}
+.battery::before {
+    right: -4px;
+    width: 4px;
+}
+.battery::after {
+    top: 0;
+    bottom:0;
+    height: auto;
+    background-color: red;
+    width: 3px;
+    left: 0;
+}
+.battery.medium::after {
+    background-color: yellow;
+    width: 9px;
+}
+.battery.full::after {
+    background-color: green;
+    width: auto;
+    right: 0;
+}
+msqrt {
+    transform: scale(1.1);
+}
+.graph {
+    display: flex;
+    align-items: flex-end;
+}
+.column1, .column2, .column3, .column4, .column5 {
+    width: 30px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.column1 {
+    background-color: red;
+    height: 10px;
+}
+.column1::before {
+    position: absolute;
+    top: -18px;
+    content: "10%";
+}
+.column2 {
+    height: 25px;
+    background-color: orange;
+}
+.column2::before {
+    position: absolute;
+    top: -18px;
+    content: "25%";
+}
+.column3 {
+    height: 50px;
+    background-color: yellow;
+}
+.column3::before {
+    position: absolute;
+    top: -18px;
+    content: "50%";
+}
+.column4 {
+    height: 75px;
+    background-color: lawngreen;
+}
+.column4::before {
+    position: absolute;
+    top: -18px;
+    content: "75%";
+}
+.column5 {
+    height: 100px;
+    background-color: green;
+}
+.column5::before {
+    position: absolute;
+    top: -18px;
+    content: "100%";
+}
+.weather-group {
+    display: flex;
+    align-items: stretch;
+
+}
+.weather {
+    width: 80px;
+    color: white;
+    background-color: #333;
+    padding: 10px 30px;
+    border: #999 solid;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.weather:hover {
+    box-shadow: 0 0 10px 5px black;
+}
+.weather h1 {
+    font-size: medium;
+    margin: 0;
+    margin-bottom: 3px;
+    margin-top: 5px;
+}
+.weather span {
+    font-size: small;
+    color: #999;
+}
+.turned, .moved, .orientated, .scaled, .transformed {
+    height: 50px;
+    width: 50px;
+    margin: 30px;
+    background-color: blue;
+}
+.turned {
+    transform: rotate(30deg);
+}
+.moved {
+    transform: translate(40px, 5px);
+}
+.orientated {
+    transform: skew(30deg, 20deg);
+}
+.scaled {
+    transform: scale(1.7, .7);
+}
+.transformed {
+    transform: skew(10deg) scaleX(1.3);
+}
